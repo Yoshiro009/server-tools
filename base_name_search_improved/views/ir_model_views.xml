@@ -10,10 +10,12 @@
         <field name="inherit_id" ref="base.view_model_form"/>
         <field name="arch" type="xml">
             <field name="state" position="after">
+                <field name="add_smart_search"/>
                 <field name="name_search_ids"
                        widget="many2many_tags"
                        domain="[('model_id', '=', id)]"
                     />
+                <field name="name_search_domain"/>
             </field>
         </field>
     </record>
