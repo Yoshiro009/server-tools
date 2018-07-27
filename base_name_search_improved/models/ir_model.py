@@ -100,6 +100,7 @@ class IrModel(models.Model):
             @api.model
             def name_search(self, name='', args=None,
                             operator='ilike', limit=100):
+                limit = limit or 0
                 enabled = self.env.context.get('name_search_extended', True)
                 if enabled:
                     # we add domain
